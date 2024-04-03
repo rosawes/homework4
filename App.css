@@ -1,0 +1,172 @@
+body {
+    color: #333333;
+    align-items: center;
+    background-color: white;
+    margin: 24px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.title {
+    margin-top: 10px;
+    color: rgb(215, 4, 102);
+
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+button {
+/* style taken from bootstrap */
+    display: block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: #fff;
+    margin: auto;
+}
+
+#persistentBtn {
+    margin-top: 20px;
+}
+        
+.cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.eachCard {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background: #666666;
+    transition: 0.25s;
+    color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0;
+
+    
+}
+
+
+
+.eachCard.revealed {
+    background-color: #82c37b;
+    color: #000;
+    cursor: default;
+    /*revealed cards can't be clicked*/
+}
+
+.eachCard.hidden:hover {
+    background-color: #333333;
+    color: transparent;
+    cursor: pointer;
+}
+
+.eachCard.hidden {
+    background-image: url("./mountains.jpg"); height: 150px; width:100px;
+    background-size: cover
+}
+
+.eachCard.chosen,
+.eachCard.revealed {
+    border: 2px solid #666666;
+    color: hsl(0, 0%, 100%);
+}
+
+.hidden svg {
+    display: none;
+}
+
+.revealed svg {
+    display: block;
+}
+
+#gameOverMessage {
+    display: none;
+    position: fixed;
+    background-color: rgb(205, 186, 80);
+    padding: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+
+#currentRound {
+    font-size: 18px; 
+    color: #333; 
+    background-color: #ffffff;
+    margin: 15px auto; 
+    width: fit-content; 
+}
+
+.game-container{
+    display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}
+
+.panel {
+    width: 320px; 
+    padding: 20px;
+    margin-right: 20px; 
+  }
+
+  .game-board {
+    flex-grow: 1;
+  }
+
+  .endDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .dialogContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #restartButton {
+    margin-top: 20px;
+  }
